@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- <link rel="stylesheet" type="text/css" href="./css/bootstrap_limitless.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.min.css" />
+    
+    <link rel="stylesheet" type="text/css" href="./css/layout.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/colors.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/components.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Title</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand col-2" href="/">
+                    <img src="./assets/images/logo.png" alt="" class="img-fluid" />
+                </a>
+                <form class="form-inline mobile">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn " type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="form-inline d-none d-lg-flex">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn " type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                    <ul class="navbar-nav ml-auto px-0 top-menu">
+                        <li class="nav-item active mr-auto ">
+                            <a class="nav-link d-flex align-items-center" href="#" style="color: #2F1564;"><img src="./assets/images/add-auction-btn.png" alt="" style="margin-right: 10px;">Add Auction</a>
+                        </li>
+                        <li class="nav-item d-none d-lg-flex">
+                            <a class="nav-link bcart" href="#"><img src="./assets/images/cart-btn.png" alt="" class="my-cart"><span class="badge badge-pill badge-danger">23</span></a>
+                        </li>
+                        <li class="nav-item divider"></li>
+                        <li class="nav-item d-none d-lg-flex">
+                            <a class="nav-link" href="#"><img src="./assets/images/login-btn.png" alt="" srcset=""></a>
+                        </li>
+                        <li class="nav-item mobile">
+                            <a class="nav-link" href="#">My Cart <img src="./assets/images/cart-btn.png" alt="" class="my-cart"><span class="badge badge-pill badge-danger">3</span></a> <span class="mobile-divider"></span><a class="nav-link" href="#">Logout <img src="./assets/images/login-btn.png" alt="" srcset=""></a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <!--/.Navbar-->
+    </header>
+<!-- Filters Section -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid filter">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#filterNav" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-filter"></i>
+        </button>
+
+        <div class="collapse navbar-collapse filter-list row" id="filterNav">
+            
+           
+                <div class="col-lg-2 col-xs-12 col-sm-6 mb-2 categ">
+                    <i class="fas fa-bars"></i>
+                            <select class="form-control multiselect" data-button-width="auto" data-fouc>
+                                <option value="all">All categories</option>
+                                <option value="tomatoes">Category 1</option>
+                                <option value="mozarella">Category 2</option>
+                                <option value="mushrooms">Category 3</option>
+                            </select>
+                            <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="col-lg-2 col-xs-12 col-sm-6 mb-2">
+                    <li class="nav-item dropdown">
+                        <div class="input-group">
+                            <span class="input-group-prepend" style="border-radius: 0 !important;">
+                                <span class="input-group-text"><i class="icon-calendar22"></i></span>
+                            </span>
+                            <input type="text" class="form-control daterange-single" value="03/18/2013">
+                        </div>
+                    </li>
+                </div>
+                <div class="col-lg-2 col-xs-12 col-sm-6 mb-2 categ">
+                    <i class="fas fa-map-marker-alt"></i>
+                        <select class="form-control select-search" data-fouc>
+                                <option value="">Position</option>
+                                <option value="CO">Colorado</option>
+                                <option value="ID">Idaho</option>
+                                <option value="WY">Wyoming</option>
+                                <option value="AL">Alabama</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                           
+                        </select>
+                </div>
+                <div class="col-lg-2 col-xs-12 col-sm-6 mb-2 categ">
+                    <i class="fas fa-bars"></i>
+                        <select class="form-control select" data-fouc>
+                                <option value="">Sort by</option>
+                                <option value="CO">Colorado</option>
+                                <option value="ID">Idaho</option>
+                                <option value="WY">Wyoming</option>
+                        </select>
+                </div>
+                <div class="col-lg-2 col-xs-12 col-sm-6 mb-2">
+                    <div class="btn-group justify-content-around align-items-center">
+                        <i class="far fa-money-bill-alt"></i>
+                        <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Price</a>
+                        <i class="fas fa-chevron-down"></i>
+                        <div class="dropdown-menu">
+                            <div class="form-group">
+                                <label class="col-form-label col-12">Max price</label>
+                                <div class="col-12">
+                                    <input type="number" class="form-control w-100">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-form-label col-12">Min price</label>
+                                <div class="col-12">
+                                    <input type="number" class="form-control w-100">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary bid-btn">Submit</button>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-xs-12 col-sm-6 d-flex justify-content-around align-items-center mb-2">
+                    <li class="nav-item active ml-auto">
+                        <a href=""><i class="fas fa-map-marked-alt"></i></a>
+                    </li>
+                    <li class="nav-item divider"></li>
+                    <li class="nav-item ml-4">
+                        <a href=""><i class="fas fa-th"></i></i></a>
+                    </li>
+                </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Bidis List -->
+    <section class="bids-map-view">
+
+        <!-- Main Content -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12" style="position: relative;">
+                    <div class="list-bids">
+                        <ul class="list-group ">
+
+                            <!-- list group item -->
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="remainig">
+                                    <span>remainig 3H</span>
+                                </div>
+                                <div class="custom-badge">
+                                    <div class="ribbon">
+                                        <span>live</span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="media ">
+                                    <div class="media-body order-2 py-3">
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                        <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                            <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                            <button type="submit" class="btn btn-primary bid-btn d-block d-sm-none">Subscribe</button>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary bid-btn d-none d-sm-block">Subscribe</button>
+                                    </div><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                                </div>
+                                <!-- End -->
+                            </li>
+                            <!-- End -->
+                            <!-- list group item -->
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="remainig">
+                                    <span>remainig 3H</span>
+                                </div>
+                                <div class="custom-badge">
+                                    <div class="ribbon">
+                                        <span>live</span>
+                                    </div>
+                                </div>
+                                <div class="media ">
+                                    <div class="media-body order-2 py-3">
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                        <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                            <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                            <button type="submit" class="btn btn-primary bid-btn d-block d-sm-none">Subscribe</button>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary bid-btn d-none d-sm-block">Subscribe</button>
+                                    </div><img src="https://res.cloudinary.com/mhmd/image/upload/v1556485078/shoes-4_vgfjy9.jpg" alt="Generic placeholder image"  class="order-1  img-fluid">
+                                </div>
+                                <!-- End -->
+                            </li>
+                            <!-- End -->
+                            <!-- list group item -->
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="remainig">
+                                    <span>remainig 3H</span>
+                                </div>
+                                <div class="custom-badge">
+                                    <div class="ribbon">
+                                        <span>live</span>
+                                    </div>
+                                </div>
+                                <div class="media ">
+                                    <div class="media-body order-2 py-3">
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                        <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                            <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                            <button type="submit" class="btn btn-primary bid-btn d-block d-sm-none">Subscribe</button>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary bid-btn d-none d-sm-block">Subscribe</button>
+                                    </div><img src="https://res.cloudinary.com/mhmd/image/upload/v1556485078/shoes-4_vgfjy9.jpg" alt="Generic placeholder image"  class="order-1  img-fluid">
+                                </div>
+                                <!-- End -->
+                            </li>
+                            <!-- End -->
+                            <!-- list group item -->
+                            <li class="list-group-item">
+                                <!-- Custom content-->
+                                <div class="remainig">
+                                    <span>remainig 3H</span>
+                                </div>
+                                <div class="custom-badge">
+                                    <div class="ribbon">
+                                        <span>live</span>
+                                    </div>
+                                </div>
+                                <div class="media ">
+                                    <div class="media-body order-2 py-3">
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                        <p class="font-italic text-muted mb-3 small" style="
+                                        display: flex;
+                                        align-items: center;
+                                    "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                        <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                            <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                            <button type="submit" class="btn btn-primary bid-btn d-block d-sm-none">Subscribe</button>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary bid-btn d-none d-sm-block">Subscribe</button>
+                                    </div><img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80" alt="Generic placeholder image"  class="order-1  img-fluid">
+                                </div>
+                                <!-- End -->
+                            </li>
+                            <!-- End -->
+                              <!-- Pager -->
+                        <ul class="pagination pagination-separated align-self-center">
+                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-fast-backward"></i></a></li>
+                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-arrow-left"></i> </a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">4</a></li>
+                            <li class="page-item"><a href="#" class="page-link"> <i class="fas fa-arrow-right"></i></a></li>
+                            <li class="page-item"><a href="#" class="page-link"><i class="fas fa-fast-forward"></i></a></li>
+                        </ul>
+                        <!-- End Pager -->
+                        </ul>
+                        <!-- End -->
+                      
+                    </div>
+                    
+                </div>
+
+                <div class="col-lg-6 col-xs-12" style="
+                    position: relative;
+                ">
+                    <div class="map">
+                        <div class="map-item">
+                            <div class="custom-badge">
+                                <div class="ribbon">
+                                    <span>live</span>
+                                </div>
+                            </div>
+                            <div class="media ">
+                                <div class="media-body order-2 py-2">
+                                    <!-- <h5 class="mt-0 font-weight-bold mb-2">Awesome Last product</h5> -->
+                                    <p class="font-italic text-muted small" style="
+                                    display: flex;
+                                    align-items: center;
+                                "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                    <p class="font-italic text-muted small" style="
+                                    display: flex;
+                                    align-items: center;
+                                "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i>22/11/2020 15:00</p>
+                                    <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                        <h6 class="font-weight-bold">220.00 TND</h6>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary bid-btn">Subscribe</button>
+                                </div><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1934&amp;q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                            </div>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2754912.745393155!2d9.214074425513035!3d35.14741478197245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stn!4v1587571311248!5m2!1sen!2stn" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Map View -->
+
+    <!-- Grid View -->
+
+    <section class="grid-view">
+        
+        <div class="container-fluid">
+            <div id="products" class="row view-group">
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                                
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                                
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+                <div class="item col-6 col-sm-4 col-md-3 col-lg-3">
+                    <!-- Custom content-->
+                    <div class="grid-item">
+                        <div class="remainig">
+                            <span>remainig 3H</span>
+                        </div>
+                        <div class="custom-badge">
+                            <div class="ribbon">
+                                <span>live</span>
+                            </div>
+                            
+                        </div>
+                        <div class="media flex-column align-items-center">
+                            <div class="media-body order-2 py-3">
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-gavel mr-2" style="font-size: 20px;"></i>Auction/2020/00009876</p>
+                                <p class="font-italic text-muted mb-3 small" style="
+                                display: flex;
+                                align-items: center;
+                            "><i class="fas fa-calendar-alt mr-2" style="font-size: 20px;"></i></i>22/11/2020 15:00</p>
+                                <div class="d-flex align-items-center justify-content-between mt-1 list-price">
+                                    <h6 class="font-weight-bold my-2">220.00 TND</h6>
+                                </div>
+                                
+                            </div>
+                            <button type="submit" class="btn btn-primary bid-btn order-3">Subscribe</button>
+                            <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80" alt="Generic placeholder image" class="order-1 img-fluid">
+                        </div>
+                        <!-- End -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- End Grid View -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/bootstrap_multiselect.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script src="./js/daterangepicker.js"></script>
+    <script src="./js/main.js" type=""></script>
+</body>
+
+</html>
