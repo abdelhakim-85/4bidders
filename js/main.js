@@ -48,6 +48,10 @@ $(document).ready(function () {
   $(".multiselect").multiselect();
   $(".select-search").select2();
   $(".select").select2();
+  $('.details-from select').select2({
+    minimumResultsForSearch: Infinity,
+    // width: 250
+});
   $(".daterange-single").daterangepicker({
     singleDatePicker: true,
   });
@@ -86,7 +90,7 @@ $(document).ready(function () {
     e.preventDefault();
 
     $("body").toggleClass("sidebar-xs").removeClass("sidebar-mobile-main");
-    revertBottomMenus();
+    // revertBottomMenus();
   });
 });
 targetElement.ontouchend = (e) => {
